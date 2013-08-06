@@ -64,9 +64,13 @@ public class FSTTerminal extends FSTNode {
 
 	@Override
 	public FSTNode getDeepClone() {
-		return new FSTTerminal(getType(), getName(), getBody(),
+		FSTTerminal clone = new FSTTerminal(getType(), getName(), getBody(),
 				getSpecialTokenPrefix(), getCompositionMechanism(),
 				getMergingMechanism());
+		if(contractCompKey != null)
+			clone.setContractCompKey(contractCompKey);
+		
+		return clone;
 	}
 
 	public void setBody(String b) {

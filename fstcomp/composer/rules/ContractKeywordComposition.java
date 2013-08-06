@@ -42,7 +42,7 @@ public class ContractKeywordComposition extends AbstractCompositionRule {
 				} else if (!isValidOrder(keywordA, keywordB)) {
 					terminalComp.setContractCompKey(keywordB);
 					throw new CompositionException(null, terminalA,
-							"Overriding Keyword " + keywordB + " with "
+							"Overriding keyword " + keywordB + " with "
 									+ keywordA + " is not allowed!");
 				}
 			}
